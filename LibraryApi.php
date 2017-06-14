@@ -17,7 +17,7 @@ class LibraryApi
     public function __construct()
     {
         if(!$this->_auth_token || empty($this->_auth_token))
-            die('Auth Token was not set.');
+            die('Auth Token was not set in LibraryApi Class! Please set it.');
         // Set the access token
         $this->setHeaders();
     }
