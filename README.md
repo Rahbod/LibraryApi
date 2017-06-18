@@ -25,7 +25,8 @@ Get list of books with optional parameters:
  *      "title" => "TEST TITLE", // Search the term in the title.
  *      "text" => "TEST TEXT", // Search the text in the book summary.
  *      "author" => "TEST AUTHOR", // Search the term in the book authors.
- *      "subject" => "TEST SUBJECT", // Search the term in the book subjects.
+ *      "publisher" => "TEST PUBLISHER", // Search the term in the book publishers. ## ONLY Valid on historylib.com and literaturelib.com domians
+ *      "subject" => "TEST SUBJECT", // Search the term in the book subjects. ## NOT Valid on historylib.com and literaturelib.com domians
  *      "tags" => "TEST TAG", // Search the term in the book tags.
  * ];
 ```
