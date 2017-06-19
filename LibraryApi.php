@@ -5,7 +5,7 @@ class LibraryApi
     const API_BASE_URI = 'http://etheosophybooks.com/api';
 
     // Authentication Data
-    private $_http_x = false;
+    private $_http_x = true;
     // Authentication Data
     private $_auth_token;
     // Response Code
@@ -16,8 +16,9 @@ class LibraryApi
     // CURL Headers
     public $_headers;
 
-    public function __construct()
+    public function __construct($http_header = false)
     {
+        $this->_http_x = $http_header?true:false;
         if(!$this->_auth_token || empty($this->_auth_token))
             die('Auth Token was not set in LibraryApi Class! Please set it.');
         // Set the access token
