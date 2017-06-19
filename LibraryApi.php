@@ -5,6 +5,8 @@ class LibraryApi
     const API_BASE_URI = 'http://etheosophybooks.com/api';
 
     // Authentication Data
+    private $_http_x = false;
+    // Authentication Data
     private $_auth_token;
     // Response Code
     private $_response_code;
@@ -28,8 +30,9 @@ class LibraryApi
      */
     private function setHeaders($cache = false, $contentLength = NULL)
     {
+        $prefix = $this->_http_x?"X-":"";
         $this->_headers = array(
-            "Authorization: Token {$this->_auth_token}",
+            "{$prefix}Authorization: Token {$this->_auth_token}",
             'Content-Type: application/json',
         );
 
