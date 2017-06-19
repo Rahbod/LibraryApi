@@ -25,7 +25,8 @@ Get list of books with optional parameters:
  *      "title" => "TEST TITLE", // Search the term in the title.
  *      "text" => "TEST TEXT", // Search the text in the book summary.
  *      "author" => "TEST AUTHOR", // Search the term in the book authors.
- *      "subject" => "TEST SUBJECT", // Search the term in the book subjects.
+ *      "publisher" => "TEST PUBLISHER", // Search the term in the book publishers. ## ONLY Valid on historylib.com and literaturelib.com domians
+ *      "subject" => "TEST SUBJECT", // Search the term in the book subjects. ## NOT Valid on historylib.com and literaturelib.com domians
  *      "tags" => "TEST TAG", // Search the term in the book tags.
  * ];
 ```
@@ -83,12 +84,13 @@ Get Response:
  *              "id" => xxxx, //  Returns the book id.
  *              "title" => "BOOK TITLE", //  Returns the book title.
  *              "summary" => "BOOK SUMMARY", //  Returns the book summary.
- *              "bookLink" => "http://www.eliteraturebook.com/books/view/10341", //  Returns the view book link in destination website.
- *              "image" => "http://www.eliteraturebook.com/books/view/10341", //  Returns book's image url.
+ *              "bookLink" => "http://www.xxxx.com/books/view/10341", //  Returns the view book link in destination website.
+ *              "small_image" => "http://www.xxxx.com/books/upload/books/thumbnails_162x244/5945dd891ba7b.jpg", //  Returns book's small image url.
+ *              "image" => "http://www.xxxx.com/upload/books/thumbnails_266x400/5945dd891ba7b.jpg", //  Returns book's image url.
  *              "files" => [ //  Returns the book files url array.
- *                  "pdf" => "http://www.eliteraturebook.com/books/download/?hash=eyJpZCI6IjEwMzQxIiwidHlwZSI6InBkZiJ9" // Returns pdf file url if exists.
- *                  "docx" => "http://www.eliteraturebook.com/books/download/?hash=eyJpZCI6IjEwMzQxIiwidHlwZSAFAW@#e2r" // Returns word docx format file url if exists.
- *                  "doc" => "http://www.eliteraturebook.com/books/download/?hash=eyJpZCI6IjEwMzQxIiwidHlwZSAFAW@#e2r" // Returns word doc format file url if exists.
+ *                  "pdf" => "http://www.xxxx.com/books/download/?hash=eyJpZCI6IjEwMzQxIiwidHlwZSI6InBkZiJ9" // Returns pdf file url if exists.
+ *                  "docx" => "http://www.xxxx.com/books/download/?hash=eyJpZCI6IjEwMzQxIiwidHlwZSAFAW@#e2r" // Returns word docx format file url if exists.
+ *                  "doc" => "http://www.xxxx.com/books/download/?hash=eyJpZCI6IjEwMzQxIiwidHlwZSAFAW@#e2r" // Returns word doc format file url if exists.
  *               ], //  Returns book's image url.
  *              "persons" => "xxxx, yyyy", // Returns the book persons name separated with comma.
  *              "publishers" => "zzzz", // Returns the book publishers name separated with comma.
