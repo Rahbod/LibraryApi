@@ -7,6 +7,9 @@ create new object from api class
 <?php
 include_once 'LibraryApi.php';
 $api = new LibraryApi();
+
+// For EbookShia website api should use following code
+$api = new LibraryApi(true);
 ?>
 ```
 ### Get List
