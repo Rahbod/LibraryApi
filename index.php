@@ -1,6 +1,13 @@
 <?php
+echo '<meta charset="utf-8">';
 include_once 'LibraryApi.php';
-$api = new LibraryApi();
+$token = 'xxxxxxxxxxx'; // get your api token from api provider
+$api_url = 'http://eliteraturebook.com/api'; // Eliterature Book website
+$api_url = 'http://etheosophybooks.com/api'; // Etheosophy Books Book website
+$api_url = 'http://ebookshia.com/api'; // EBook Shia website
+$api_url = 'http://historylib.com/api'; // History Lib website
+$api_url = 'http://literaturelib.com/api'; // Literature Lib website
+$api = new LibraryApi($token,$api_url);
 
 /**
  * get list of books
@@ -46,7 +53,7 @@ $options = [
 //    'lastId' => 10341,
 //    'page' => 3,
 //    'limit' => 50,
-    'title' => 'قلوب'
+//    'title' => 'تشیع    '
 ];
 $list = $api->getBookList($options);
 
@@ -84,5 +91,5 @@ $list = $api->getBookList($options);
  *      ]
  *
  */
-$exampleBookId=108;
+$exampleBookId=27;
 $bookDetails = $api->getBookDetails($exampleBookId);

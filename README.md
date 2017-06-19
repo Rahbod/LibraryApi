@@ -6,10 +6,12 @@ create new object from api class
 ```php
 <?php
 include_once 'LibraryApi.php';
-$api = new LibraryApi();
+
+$token = "xxxxxxxxxxxxxxxxxxxxxx"; // get your token from api provider
+$api = new LibraryApi($token);
 
 // For EbookShia website api should use following code
-$api = new LibraryApi(true);
+$api = new LibraryApi($token, true);
 ?>
 ```
 ### Get List

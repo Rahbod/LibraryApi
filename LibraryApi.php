@@ -2,12 +2,12 @@
 include_once 'Curl.php';
 class LibraryApi
 {
-    const API_BASE_URI = 'http://etheosophybooks.com/api';
-
     // Authentication Data
     private $_http_x = true;
     // Authentication Data
     private $_auth_token;
+    // Api Base Url
+    private $_api_base_url;
     // Response Code
     private $_response_code;
     // Response
@@ -16,11 +16,15 @@ class LibraryApi
     // CURL Headers
     public $_headers;
 
-    public function __construct($http_header = false)
+    public function __construct($token, $api_base_url, $http_header = false)
     {
         $this->_http_x = $http_header?true:false;
+        $this->_auth_token = $token?:false;
+        $this->_api_base_url = $api_base_url?:false;
         if(!$this->_auth_token || empty($this->_auth_token))
-            die('Auth Token was not set in LibraryApi Class! Please set it.');
+            die('Auth Token was not set! Please set it correctly.');
+        if(!$this->_api_base_url || empty($this->_api_base_url))
+            die('API BASE URL was not set! Please set it correctly.');
         // Set the access token
         $this->setHeaders();
     }
@@ -82,9 +86,9 @@ class LibraryApi
         if($queryParams){
             $data = http_build_query($queryParams);
             // Build the Calendar URL
-            $url = self::API_BASE_URI . "/list?" . $data;
+            $url = $this->_api_base_url . "/list?" . $data;
         }else
-            $url = self::API_BASE_URI . "/list";
+            $url = $this->_api_base_url . "/list";
         // Load the CURL Library
         $curl = new Curl($url);
         // Set the headers
@@ -113,7 +117,7 @@ class LibraryApi
         $queryParams = ['id' => $id];
         $data = http_build_query($queryParams);
         // Build the Calendar URL
-        $url = self::API_BASE_URI . "/bookDetails?" . $data;
+        $url = $this->_api_base_url . "/bookDetails?" . $data;
         // Load the CURL Library
         $curl = new Curl($url);
         // Set the headers
