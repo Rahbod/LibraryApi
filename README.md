@@ -8,10 +8,15 @@ create new object from api class
 include_once 'LibraryApi.php';
 
 $token = "xxxxxxxxxxxxxxxxxxxxxx"; // get your token from api provider
-$api = new LibraryApi($token);
+$api_url = 'http://eliteraturebook.com/api'; // Eliterature Book website
+$api_url = 'http://etheosophybooks.com/api'; // Etheosophy Books Book website
+$api_url = 'http://ebookshia.com/api'; // EBook Shia website
+$api_url = 'http://historylib.com/api'; // History Lib website
+$api_url = 'http://literaturelib.com/api'; // Literature Lib website
+$api = new LibraryApi($token, $api_url);
 
 // For EbookShia website api should use following code
-$api = new LibraryApi($token, true);
+$api = new LibraryApi($token, $api_url, true);
 ?>
 ```
 ### Get List
