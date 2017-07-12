@@ -102,7 +102,7 @@ Get Response:
  *                  "pdf" => "http://www.xxxx.com/books/download/?hash=eyJpZCI6IjEwMzQxIiwidHlwZSI6InBkZiJ9" // Returns pdf file url if exists.
  *                  "docx" => "http://www.xxxx.com/books/download/?hash=eyJpZCI6IjEwMzQxIiwidHlwZSAFAW@#e2r" // Returns word docx format file url if exists.
  *                  "doc" => "http://www.xxxx.com/books/download/?hash=eyJpZCI6IjEwMzQxIiwidHlwZSAFAW@#e2r" // Returns word doc format file url if exists.
- *               ], //  Returns book's image url.
+ *               ],
  *              "persons" => "xxxx, yyyy", // Returns the book persons name separated with comma.
  *              "publishers" => "zzzz", // Returns the book publishers name separated with comma.
  *              "subjects" => "xxxx, yyyy, zzzz", // Returns the book subjects separated with comma.
