@@ -90,7 +90,7 @@ Get Response:
  *      - Status is True:
  *      [
  *          "status" => true, // Returns the request status.
- *          "details" => // Returns the total number of results that you have searched for.
+ *          "details" => // Returns book details array that you have searched.
  *           [
  *              "id" => xxxx, //  Returns the book id.
  *              "title" => "BOOK TITLE", //  Returns the book title.
